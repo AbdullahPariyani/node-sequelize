@@ -7,7 +7,15 @@ class bookModel {
         } catch (error) {
             console.log('error', error);
         }
+    }
 
+    async add(req) {
+        try {
+            console.log('create model');
+            return await BookSchemas.create(req);
+        } catch (error) {
+            console.log('error', error);
+        }
     }
 }
 

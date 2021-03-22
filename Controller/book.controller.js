@@ -1,14 +1,16 @@
 const books = new(require('../Models/book.model'))();
-const { STATUS_CODES } = require('../../Configs/constants');
+const { STATUS_CODES } = require('../Configs/constants');
 class bookController {
 
     async Get(request, response) {
         try {
-            const data = await books.getBooks();
-            response.handler.success(data);
-            //response.send(data);
+            let books = await books.getBooks();
+            if (books)
+                response.handler.success(books, 'STATUS.SUCCESS')
+            else
+                response.handler.notFound();
         } catch (error) {
-            console.log(error);
+            response.handler.serverError(error)
         }
     }
 

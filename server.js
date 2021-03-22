@@ -14,7 +14,7 @@ server.use((req, res, next) => {
     next()
 });
 
-require('./app/Router')(server);
+require('./Router')(server);
 
 server.use((err, req, res, next) => {
     if (res.headersSent) {

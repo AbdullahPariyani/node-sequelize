@@ -25,7 +25,6 @@ class ResponseHandler {
     constructor(req, res) {
         this.req = req;
         this.res = res;
-        console.log(this.req, this.res)
     }
 
     sender(code, message, data, error, info) {

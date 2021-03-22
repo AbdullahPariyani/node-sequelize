@@ -1,15 +1,15 @@
 'use strict';
-module.exports = (sequelize, Sequelize) => {
+module.exports = (sequelize, DataTypes) => {
     const Books = sequelize.define("books", {
         id: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        book_name: Sequelize.STRING,
-        book_author: Sequelize.STRING,
-        book_publish_Date: Sequelize.DATE,
-        book_type: Sequelize.STRING
+        book_name: DataTypes.STRING,
+        book_author: DataTypes.STRING,
+        book_publish_Date: DataTypes.DATE,
+        book_type: DataTypes.STRING
     });
     return Books;
 }

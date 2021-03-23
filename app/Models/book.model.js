@@ -1,7 +1,6 @@
 const { books: BookSchemas } = require('../../Database/Schemas');
 class bookModel {
-    async getBooks() {
-        console.log('model');
+    async get() {
         try {
             return await BookSchemas.findAll();
         } catch (error) {

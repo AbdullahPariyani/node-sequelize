@@ -5,9 +5,9 @@ class bookController {
 
     async Get(request, res) {
         try {
-            console.log(res);
-            res.handler.success({ userName: "John" }, "User created")
-                // res.send(await books.get());
+            //console.log(res);
+            //res.handler.success({ userName: "John" }, "User created")
+            res.send(await books.get());
         } catch (error) {
             console.log(error);
         }
@@ -23,6 +23,19 @@ class bookController {
             const insertData = await books.add(request.body);
             //response.handler.success(data);
             response.send(insertData);
+        } catch (error) {}
+    }
+
+    async Delete(request, response) {
+        try {
+            const deleteBook = await books.delete(request.params.id);
+            response.send({ msg: 'deleted successfully', deleteBook });
+        } catch (error) {}
+    }
+
+    async Update(request, response) {
+        try {
+
         } catch (error) {}
     }
 }

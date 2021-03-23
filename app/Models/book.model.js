@@ -10,10 +10,17 @@ class bookModel {
 
     async add(req) {
         try {
-            console.log('create model');
             return await BookSchemas.create(req);
         } catch (error) {
             console.log('error', error);
+        }
+    }
+
+    async delete(id) {
+        try {
+            return await BookSchemas.destroy({ where: { id } })
+        } catch (error) {
+
         }
     }
 }

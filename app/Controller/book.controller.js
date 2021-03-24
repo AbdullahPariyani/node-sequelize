@@ -33,9 +33,10 @@ class bookController {
         } catch (error) {}
     }
 
-    async Update(request, response) {
+    async Edit(request, response) {
         try {
-
+            const updateBook = await books.edit(request.body);
+            response.send(updateBook);
         } catch (error) {}
     }
 }

@@ -23,6 +23,10 @@ class bookModel {
 
         }
     }
+
+    async edit(body) {
+        return await BookSchemas.update(body, { where: { id: body.id } });
+    }
 }
 
 module.exports = bookModel;

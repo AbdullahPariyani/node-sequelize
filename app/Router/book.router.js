@@ -8,5 +8,6 @@ const bookValidators = require('../Middlewares/Validators/books.validators');
 router.route('/saveBook').post(bookValidators.add, bookController.Add);
 router.route('/getAllBooks').get(bookController.Get);
 router.route('/deleteBook/:id').delete(bookController.Delete);
+router.route('/updateBook').put(bookController.Edit);
 
 module.exports = router;

@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
         book_name: DataTypes.STRING,
         book_author: DataTypes.STRING,
         book_publish_Date: DataTypes.DATE,
-        book_type: DataTypes.STRING
+        book_type: DataTypes.STRING,
+        uuid:DataTypes.UUID
     });
     return Books;
 }

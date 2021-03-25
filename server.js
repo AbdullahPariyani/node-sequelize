@@ -2,6 +2,7 @@ const express = require('express');
 const server = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const fs = require('fs');
 require('./Configs/globals'); // GLOBAL SETTINGS FILES
 
 server.use(cors());

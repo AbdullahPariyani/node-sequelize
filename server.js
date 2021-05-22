@@ -24,7 +24,7 @@ server.use((err, req, res, next) => {
     res.handler.serverError(err)
 })
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8090;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });

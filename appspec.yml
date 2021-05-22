@@ -5,11 +5,11 @@ files:
     destination: /home/ec2-user/saree-backend-temp
 hooks:
   ApplicationStop:
-    - location: scripts/application_stop.sh
+    - location: sudo chmod +x scripts/stop_server.sh
       timeout: 300
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
   ApplicationStart:
-    - location: scripts/application_start.sh
+    - location: scripts/application_start.sh 
       timeout: 300
